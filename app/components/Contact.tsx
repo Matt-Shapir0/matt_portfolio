@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import emailjs from '@emailjs/browser';
+import Footer from './Footer';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -38,7 +39,7 @@ const handleSubmit = (e: React.FormEvent) => {
   };
 
   return (
-    <section id="contact" className="relative pt-2 px-24 min-h-screen flex items-center">
+    <section id="contact" className="relative py-12 px-24 min-h-screen flex items-center">
       
       {/* 1. Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -60,12 +61,10 @@ const handleSubmit = (e: React.FormEvent) => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           
           {/* Left Column: Form Card */}
-          {/* Form Card */}
-          <div className="bg-white/70 backdrop-blur-md p-8 md:p-10 rounded-[2rem] shadow-xl border border-white/50">
+          <div className="bg-white/70 backdrop-blur-md p-8 md:p-10 rounded-4xl shadow-xl border border-white/50">
             <h3 className="text-2xl font-bold text-navy mb-8">Send me a Message</h3>
             
-            {/* Added ref and name attributes (important for EmailJS) */}
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-3">
               <div>
                 <label className="block text-sm font-bold text-navy mb-2">Name</label>
                 <input 
