@@ -1,5 +1,40 @@
 @import "tailwindcss";
 
+@theme {
+  /* This connects your Figma colors to Tailwind classes like 'text-brand' */
+  --color-brand: #950740;
+  --color-navy: #1F4552;
+  --color-azure: #253439;
+
+  /* This connects your Google Fonts to 'font-serif' and 'font-sans' */
+  --font-serif: var(--font-caladea), serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
+
+  --animate-infinite-scroll: scroll 50s linear infinite;
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+/* This sets your global defaults without using @apply */
+:root {
+  background-color: white;
+  color: #1F4552; /* Your navy color */
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* @import "tailwindcss";
+@tailwind utilities; */
+/* @tailwind base; */
+
+/* @tailwind components; */
+
+/* @import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +58,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
