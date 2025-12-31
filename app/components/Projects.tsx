@@ -4,7 +4,7 @@ import Image from 'next/image';
 const projectData = [
   {
     title: "RetinaLiteNet: Medical Image Segmentation & Disease Classification",
-    description: "Developed a hybrid CNN-Transformer architecture in PyTorch for retinal analysis. Achieved a 0.755 Dice score and 98.3% specificity on segmentation while reaching 90% accuracy for 45-class disease classification.",
+    description: "Developed a hybrid CNN-Transformer architecture in PyTorch for retinal analysis. Achieved a 0.755 Dice score and 98.3% specificity on segmentation while reaching 90% accuracy for 15-class disease classification.",
     tags: ["PyTorch", "Transformers", "Computer Vision"],
     image: "/projects/retina.png",
     bgColor: "bg-[#FCE4EC]", // Soft Pink from your design
