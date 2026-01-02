@@ -61,7 +61,7 @@ const Skills = () => {
             {languages.map((lang, index) => (
               <div 
                 key={`lang-1-${index}`} 
-                className="flex items-center gap-4 px-6 py-3 bg-white/50 backdrop-blur-sm rounded-xl shadow-sm border border-brand/5 min-w-fit"
+                className="flex items-center gap-4 px-6 py-3 bg-white/50 backdrop-blur-sm rounded-xl shadow-sm border border-brand/5 min-w-fit transition-all duration-200 hover:bg-white/70 hover:shadow-md"
               >
                 <span className="text-brand font-bold text-xl">{lang.name}</span>
                 <div className="relative w-10 h-10">
@@ -78,7 +78,7 @@ const Skills = () => {
             {languages.map((lang, index) => (
               <div 
                 key={`lang-2-${index}`} 
-                className="flex items-center gap-4 px-6 py-3 bg-white/50 backdrop-blur-sm rounded-xl shadow-sm border border-brand/5 min-w-fit"
+                className="flex items-center gap-4 px-6 py-3 bg-white/50 backdrop-blur-sm rounded-xl shadow-sm border border-brand/5 min-w-fit transition-all duration-200 hover:bg-white/70 hover:shadow-md"
               >
                 <span className="text-brand font-bold text-xl">{lang.name}</span>
                 <div className="relative w-10 h-10">
@@ -100,11 +100,11 @@ const Skills = () => {
         {categories.map((cat) => (
           <div 
             key={cat.id} 
-            className="overflow-hidden rounded-2xl border border-brand/20 bg-white/10 backdrop-blur-sm transition-all duration-300"
+            className="overflow-hidden rounded-2xl border border-brand/20 bg-white/10 backdrop-blur-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:bg-white/20"
           >
             <button 
               onClick={() => setOpenId(openId === cat.id ? null : cat.id)}
-              className="flex w-full items-center justify-between p-6 text-left"
+              className="flex w-full items-center justify-between p-6 text-left hover:bg-white/10 transition-colors"
             >
               <span className="font-sans text-2xl md:text-3xl font-bold text-navy">{cat.title}</span>
               <ChevronDown 
@@ -118,7 +118,7 @@ const Skills = () => {
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 pt-0">
                 {cat.skills?.map((skill, index) => (
-                  <div key={skill} className="flex items-center gap-3 p-3 bg-white/30 rounded-xl border border-brand/10">
+                  <div key={skill} className="flex items-center gap-3 p-3 bg-white/30 rounded-xl border border-brand/10 transition-all duration-100 hover:shadow-md hover:-translate-y-0.5 hover:bg-white/50">
                     <div className="relative w-8 h-8 shrink-0">
                       <Image src={`/skills/${cat.images?.[index]}.png`} alt="sample" fill className="object-contain" />
                     </div>
